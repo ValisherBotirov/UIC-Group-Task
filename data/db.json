@@ -1,0 +1,14 @@
+{
+  "users" : [
+    {"id" : 1 , "fullName" : "Valisher Botirov" , "departament" : "IT", "position" : "Tashkent" , "gender" : "man","age" : 20 },
+    {"id" : 2 , "fullName" : "Azizjon Eshmatov" , "departament" : "acounting", "position" : "Navoiy" , "gender" : "man","age" : 19 },
+    {"id" : 3 , "fullName" : "Malika Xoliqova" , "departament" : "marketing", "position" : "Tashkent" , "gender" : "male","age" : 21 },
+    {"id" : 4 , "fullName" : "Doniyor Abdukarimov" , "departament" : "acounting", "position" : "Samarkand" , "gender" : "man","age" : 19 },
+    {"id" : 5 , "fullName" : "Laylo Karimova" , "departament" : "marketing", "position" : "Tashkent" , "gender" : "male","age" : 18 },
+    {"id" : 6 , "fullName" : "Jafar Murodov" , "departament" : "IT", "position" : "Khiva" , "gender" : "man","age" : 23 },
+    {"id" : 7 , "fullName" : "Zarif Nematov" , "departament" : "acounting", "position" : "Bukhara" , "gender" : "man","age" : 24 },
+    {"id" : 8 , "fullName" : "Madina Furqatovna" , "departament" : "marketing", "position" : "Samarkand" , "gender" : "male","age" : 21 },
+    {"id" : 9 , "fullName" : "Jamil Xaydarov" , "departament" : "IT", "position" : "Tashkent" , "gender" : "man","age" : 19 },
+    {"id" : 10 , "fullName" : "Diyor Amirdinov" , "departament" : "marketing", "position" : "Tashkent" , "gender" : "man","age" : 20 }
+  ]
+}
