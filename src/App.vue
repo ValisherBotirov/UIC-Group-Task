@@ -1,9 +1,9 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/addUser">AddHuman</router-link>
   </nav>
-    <h2 class="text-center text-red-400 text-2xl">hello</h2>
+    
   <router-view/>
 </template>
 
