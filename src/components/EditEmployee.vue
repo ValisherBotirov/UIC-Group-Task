@@ -19,11 +19,11 @@
         <div class = "flex gap-4">
            <div class = "flex gap-2 items-center ml-5">
              <label for="male" class = "font-medium">Male</label>
-             <input type="radio" name = "gender" id = "male" v-model = "gender">
+             <input type="radio" name = "gender" id = "male" value = "male"  v-on:input="getRadioBtn">
            </div>
            <div class = "flex gap-2 items-center ">
              <label for="famale" class = "font-medium">Famale</label>
-             <input type="radio" name = "gender" id = "famale" v-model = "gender">
+             <input type="radio" name = "gender" id = "famale" value="famale" v-on:input="getRadioBtn">
            </div>
          </div>
          <label class = "py-2 font-medium">Age</label>
@@ -64,7 +64,9 @@ export default {
       console.log(editUser);
     },
 
-   
+   getRadioBtn(chec){
+    console.log(chec.target.value);
+   }
    
   },
 

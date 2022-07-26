@@ -19,11 +19,11 @@
         <div class = "flex gap-4">
            <div class = "flex gap-2 items-center ml-5">
              <label for="male" class = "font-medium">Male</label>
-             <input type="radio" name = "gender" id = "male" v-model = "gender">
+             <input type="radio" name = "gender" id = "male" v-on:input = "getRadioAnsver" value="male">
            </div>
            <div class = "flex gap-2 items-center ">
              <label for="famale" class = "font-medium">Famale</label>
-             <input type="radio" name = "gender" id = "famale" v-model = "gender">
+             <input type="radio" name = "gender" id = "famale" v-on:input = "getRadioAnsver" value="famale">
            </div>
          </div>
          <label class = "py-2 font-medium">Age</label>
@@ -68,7 +68,10 @@ export default {
     console.log("Serverga jo'natdi");
     await axios.post("http://localhost:3000/users",this.newUser,{})
     //  await  axios.delete("http://localhost:3000/users/"+ this.id)
-  }
+   },
+   getRadioAnsver(result){
+    this.gender = result.target.value
+   }
   },
 
    

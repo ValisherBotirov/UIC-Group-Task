@@ -71,6 +71,14 @@
       "gender": "male",
       "age": 24,
       "id": 9
+    },
+    {
+      "fullName": "Malika Rustamova",
+      "departament": "IT",
+      "position": "Android Developer",
+      "gender": "famale",
+      "age": 18,
+      "id": 10
     }
   ]
 }
