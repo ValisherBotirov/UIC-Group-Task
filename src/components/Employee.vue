@@ -10,8 +10,8 @@
     <p class = "border-b-10 mt-2 font-semibold"><span>Age</span> {{params.age}}</p>
 
     <div class = "flex gap-2 ">
-      <button class="btn btn-primary"><router-link to="/editEmployee" class="hover:text-white">Edit</router-link></button>
-      <button class="btn btn-danger hover:text-white" @click = "deleteUser"> <router-link to="/" class="hover:text-white">Delete</router-link> </button>
+      <button class="btn btn-primary"><router-link :to="{name:'editEmployee',params:{id:this.params.id,fullName:this.params.fullName,departament:this.params.departament,position:this.params.position,gender:this.params.gender,age:this.params.age}}"  class="hover:text-white">Edit</router-link></button>
+      <button class="btn btn-danger hover:text-white" @click.prevent = "deleteUser"> <router-link to="/" class="hover:text-white">Delete</router-link> </button>
     </div>
   </div>
 </template>

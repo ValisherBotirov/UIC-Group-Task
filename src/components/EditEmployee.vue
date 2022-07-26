@@ -30,7 +30,7 @@
          <input type="number" class = "placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
          placeholder = "Enter Age" v-model = "age"
          />
-         <button type="submit" class = "bg-sky-500 rounded-md py-2 px-4 text-[white] mt-4" @click.prevent = "" >Save</button>
+         <button type="submit" class = "bg-sky-500 rounded-md py-2 px-4 text-[white] mt-4" @click.prevent = "editUserInfo" >Save</button>
     </form>
   </div>
 </template>
@@ -41,29 +41,30 @@ export default {
   name : "AddView",
   data() {
     return {
-      fullName : "Valisher",
-      departament : "",
-      position : "",
-      gender : "",
-      age : "",
-      newUser : null
+      fullName : this.$route.params.fullName,
+      departament : this.$route.params.departament,
+      position : this.$route.params.position,
+      gender : this.$route.params.gender,
+      age : this.$route.params.age,
+      editUser : null
     }
   },
 
   methods: {
    
-    getUserInfo(){
-      const newUser = {
+    editUserInfo(){
+      const editUser = {
         fullName : this.fullName,
         departament : this.departament,
         position : this.position,
         gender : this.gender,
         age : this.age
       }
-      this.newUser = newUser;
-        console.log(newUser);
-        this.getServer()
+      this.editUser = editUser;
+      console.log(editUser);
     },
+
+   
    
   },
 
