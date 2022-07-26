@@ -10,13 +10,14 @@
     <p class = "border-b-10 mt-2 font-semibold"><span>Age</span> {{params.age}}</p>
 
     <div class = "flex gap-2 ">
-      <button class="btn btn-primary">Edit</button>
-      <button class="btn btn-danger">Delete</button>
+      <button class="btn btn-primary"><router-link to="/editEmployee" class="hover:text-white">Edit</router-link></button>
+      <button class="btn btn-danger hover:text-white" @click = "deleteUser"> <router-link to="/" class="hover:text-white">Delete</router-link> </button>
     </div>
   </div>
 </template>
 
 <script>
+import axios from "axios"
 export default {
   data() {
     return {
@@ -25,8 +26,17 @@ export default {
     }
   },
   methods: {
-    getParams(){
-      console.log(this.params)
+   
+    showAlert(){
+      alert(`Rostdan ham ${this.params.fullName} ro'yxatdan o'chirmoqchimis!`)
+    },
+     async deleteUser(){
+      console.log(this.params.id);
+      alert(`Rostdan ham ${this.params.fullName} ro'yxatdan o'chirmoqchimis!`)
+      await  axios.delete("http://localhost:3000/users/"+ this.params.id);
+    },
+    async editUserInfo(){
+    
     }
   },
 }

@@ -67,16 +67,13 @@ export default {
     async  getServer(){
     console.log("Serverga jo'natdi");
     await axios.post("http://localhost:3000/users",this.newUser,{})
+    //  await  axios.delete("http://localhost:3000/users/"+ this.id)
   }
   },
 
    
  
-//  async mounted() {
-//   console.log("ishlaadi");
-//    await axios.post("http://localhost:3000/users",this.newUser,{})
-//     //  console.log(this.newUser);
-//   },
+
 
 }
 </script>

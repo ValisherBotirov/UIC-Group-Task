@@ -49,15 +49,6 @@
       "age": 23
     },
     {
-      "id": 7,
-      "fullName": "Zarif Nematov",
-      "departament": "Acounting",
-      "position": "Controller",
-      "gender": "male",
-      "age": 24
-      
-    },
-    {
       "id": 8,
       "fullName": "Madina Furqatovna",
       "departament": "Marketing",
@@ -66,28 +57,20 @@
       "age": 21
     },
     {
-      "id": 9,
-      "fullName": "Jamil Xaydarov",
+      "fullName": "Bekzod Baratov",
       "departament": "IT",
-      "position": "GO Developer",
+      "position": "FullStack Developer",
       "gender": "male",
-      "age": 19
+      "age": 22,
+      "id": 9
     },
     {
-      "id": 10,
-      "fullName": "Diyor Amirdinov",
+      "fullName": "Jonibek Munirov",
       "departament": "Marketing",
-      "position": "Social Media Marketing",
+      "position": "Product Marketing",
       "gender": "male",
-      "age": 20
-    },
-    {
-      "fullName": "Zuhra Soliyeva",
-      "departament": "Marketing",
-      "position": "Brand Management.",
-      "gender": "famale",
-      "age": 19,
-      "id": 11
+      "age": 24,
+      "id": 9
     }
   ]
 }
