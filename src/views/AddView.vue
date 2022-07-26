@@ -36,6 +36,7 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
   name : "AddView",
   data() {
@@ -44,10 +45,13 @@ export default {
       departament : "",
       position : "",
       gender : "",
-      age : ""
+      age : "",
+      newUser : null
     }
   },
+
   methods: {
+   
     getUserInfo(){
       const newUser = {
         fullName : this.fullName,
@@ -56,8 +60,23 @@ export default {
         gender : this.gender,
         age : this.age
       }
-      console.log(newUser);
-    }
+      this.newUser = newUser;
+        console.log(newUser);
+        this.getServer()
+    },
+    async  getServer(){
+    console.log("Serverga jo'natdi");
+    await axios.post("http://localhost:3000/users",this.newUser,{})
+  }
   },
+
+   
+ 
+//  async mounted() {
+//   console.log("ishlaadi");
+//    await axios.post("http://localhost:3000/users",this.newUser,{})
+//     //  console.log(this.newUser);
+//   },
+
 }
 </script>
