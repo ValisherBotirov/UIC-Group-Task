@@ -46,6 +46,8 @@ export default {
       position : this.$route.params.position,
       gender : this.$route.params.gender,
       age : this.$route.params.age,
+      editUser : null,
+      newGender : null,
       editUser : null
     }
   },
@@ -61,11 +63,16 @@ export default {
         age : this.age
       }
       this.editUser = editUser;
-      console.log(editUser);
+      console.log(this.editUser);
+      this.getEditUserServer()
     },
 
-   getRadioBtn(chec){
-    console.log(chec.target.value);
+   getRadioBtn(result){
+    this.newGender = result.target.value
+   },
+
+   async getEditUserServer(){
+      await axios.patch("http://localhost:3000/users/"+this.$route.params.id,this.editUser)
    }
    
   },

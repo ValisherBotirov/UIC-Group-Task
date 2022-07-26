@@ -67,7 +67,8 @@ export default {
     async  getServer(){
     console.log("Serverga jo'natdi");
     await axios.post("http://localhost:3000/users",this.newUser,{})
-    //  await  axios.delete("http://localhost:3000/users/"+ this.id)
+    //  await  axios.delete("http://localhost:3000/users/"+ this.id) 
+    // await axios.patch("http://localhost:3000/users/9",this.newUser)
    },
    getRadioAnsver(result){
     this.gender = result.target.value
