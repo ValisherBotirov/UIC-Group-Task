@@ -4,39 +4,39 @@
       "id": 1,
       "fullName": "Valisher Botirov",
       "departament": "IT",
-      "position": "Tashkent",
+      "position": "FullStack Developer",
       "gender": "male",
       "age": 20
     },
     {
       "id": 2,
-      "fullName": "Azizjon Eshmatov",
-      "departament": "acounting",
-      "position": "Navoiy",
+      "fullName": "Azizjon Aliqulov",
+      "departament": "IT",
+      "position": "Node js Backend Developer",
       "gender": "male",
       "age": 19
     },
     {
       "id": 3,
       "fullName": "Malika Xoliqova",
-      "departament": "marketing",
-      "position": "Tashkent",
+      "departament": "Marketing",
+      "position": " Product Marketing",
       "gender": "famale",
       "age": 21
     },
     {
       "id": 4,
       "fullName": "Doniyor Abdukarimov",
-      "departament": "acounting",
-      "position": "Samarkand",
+      "departament": "Acounting",
+      "position": "Auditor",
       "gender": "male",
       "age": 19
     },
     {
       "id": 5,
       "fullName": "Laylo Karimova",
-      "departament": "marketing",
-      "position": "Tashkent",
+      "departament": "Marketing",
+      "position": "Copywriting",
       "gender": "famale",
       "age": 18
     },
@@ -44,23 +44,24 @@
       "id": 6,
       "fullName": "Jafar Murodov",
       "departament": "IT",
-      "position": "Khiva",
+      "position": "Frontend Developer",
       "gender": "male",
       "age": 23
     },
     {
       "id": 7,
       "fullName": "Zarif Nematov",
-      "departament": "acounting",
-      "position": "Bukhara",
+      "departament": "Acounting",
+      "position": "Controller",
       "gender": "male",
       "age": 24
+      
     },
     {
       "id": 8,
       "fullName": "Madina Furqatovna",
-      "departament": "marketing",
-      "position": "Samarkand",
+      "departament": "Marketing",
+      "position": "Product Marketing",
       "gender": "famale",
       "age": 21
     },
@@ -68,23 +69,23 @@
       "id": 9,
       "fullName": "Jamil Xaydarov",
       "departament": "IT",
-      "position": "Tashkent",
+      "position": "GO Developer",
       "gender": "male",
       "age": 19
     },
     {
       "id": 10,
       "fullName": "Diyor Amirdinov",
-      "departament": "marketing",
-      "position": "Tashkent",
+      "departament": "Marketing",
+      "position": "Social Media Marketing",
       "gender": "male",
       "age": 20
     },
     {
       "fullName": "Zuhra Soliyeva",
       "departament": "Marketing",
-      "position": "Tashkent",
-      "gender": "",
+      "position": "Brand Management.",
+      "gender": "famale",
       "age": 19,
       "id": 11
     }

@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    
   </div>
   <div class = "card">
     <div class="card-header">
@@ -21,12 +20,12 @@
           </thead>
           <tbody>
             <tr v-for = "user in users[0]" :key="user">
-              <td>{{user.id}}</td>
-              <td>{{user.fullName}}</td>
-              <td>{{user.departament}}</td>
-              <td>{{user.position}}</td>
-              <td>{{user.gender}}</td>
-              <td>{{user.age}}</td>
+              <td><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.id}}</router-link></td>
+              <td><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.fullName}}</router-link></td>              
+              <td><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.departament}}</router-link></td>
+              <td><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.position}}</router-link></td>
+              <td><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.gender}}</router-link></td>
+              <td><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.age}} </router-link></td>      
             </tr>
           </tbody>
         </table>
@@ -36,12 +35,15 @@
 </template>
 
 <script>
-
-
 import axios from "axios"
+import Employee from "../components/Employee.vue"
 
 export default {
   name: 'HomeView',
+
+  components : {
+    Employee
+  },
  
   data() {
     return {
