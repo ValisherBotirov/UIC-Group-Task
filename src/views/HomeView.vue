@@ -1,5 +1,5 @@
 <template>
-  <div class="home grid grid-cols-[3fr_2fr] gap-10">
+  <div class="home ">
   <!-- Xodimlar ro'yxati -->
      <div class = "card">
       <div class="card-header">
@@ -34,16 +34,6 @@
       </div>
        </div>
     </div>
-  <!-- Kompaniya malumotlari  -->
-  <div class = "border">
-     <p>Umumiy xodimlar soni : {{allCount}}</p>
-     <p>Erkak xodimlar soni : {{maleCount}}</p>
-     <p>Ayol xodimlar soni : {{famaleCount}}</p>
-     <p>IT departamentdagi xodimlar soni : {{itCount}}</p>
-     <p>Marketing departamentdagi xodimlar soni : {{marketingCount}}</p>
-     <p>Acounting departamentdagi xodimlar soni  : {{acountingCount}}</p>
-     <p>Xodimlarning o'rtacha yoshi : {{middleAge}}</p>
-  </div>
   </div>
 </template>
 
@@ -60,16 +50,7 @@ export default {
  
   data() {
     return {
-      users : [],
-      maleCount : 0,
-      famaleCount : 0,
-      allCount : null,
-      itCount : 0,
-      marketingCount : 0,
-      acountingCount : 0,
-      middleAge : 0,
-      sumAge : 0
-      
+      users : [],  
     }
   },
   
@@ -79,37 +60,13 @@ export default {
     this.$router.push({path: `/emplyee/${id}`})
   },
 
-  getOficeInfo(){
-    this.allCount = this.users[0].length
-   this.users[0].map(user => {
-    if(user.gender === "male"){
-      this.maleCount += 1
-    }
-    if(user.gender === "famale"){
-      this.famaleCount += 1
-    }
-    if(user.departament === "IT"){
-      this.itCount +=1
-      }
-    if(user.departament === "Marketing"){
-      this.marketingCount +=1
-    }
-    this.acountingCount = this.allCount - (this.marketingCount + this.itCount);
-    
-    this.sumAge = this.sumAge +(+user.age);
-    // console.log(this.sumAge);
-    
-    this.middleAge = Math.round(this.sumAge / this.allCount)
-   })
-
-  }
+ 
 
   },
 
   async mounted() {
     const res = await axios.get("http://localhost:3000/users");
     this.users.push(res.data);
-    this.getOficeInfo()
     
   },
 }

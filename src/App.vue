@@ -4,13 +4,20 @@
     <router-link to="/addUser">AddHuman</router-link>
   </nav>
     
+    <div>
+      <RightMenu/>
+    </div>
+
   <router-view/>
 </template>
 
 
 <script>
+import RightMenu from "./components/RightMenu.vue"
 export default {
-  
+  components : {
+    RightMenu,
+  }
 }
 </script>
 
