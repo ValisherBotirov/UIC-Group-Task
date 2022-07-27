@@ -11,7 +11,7 @@
 
     <div class = "flex gap-2 ">
       <button class="btn btn-primary"><router-link :to="{name:'editEmployee',params:{id:this.id,fullName:this.fullName,departament:this.departament,position:this.position,gender:this.gender,age:this.age}}"  class="hover:text-white">Edit</router-link></button>
-      <button class="btn btn-danger hover:text-white" @click = "deleteUser"> <router-link to="/" class="hover:text-white">Delete</router-link> </button>
+      <button class="btn btn-danger hover:text-white" @click = "deleteUser"> Delete </button>
     </div>
   </div>
 </template>
@@ -36,7 +36,13 @@ export default {
       alert(`Rostdan ham ${this.fullName} ro'yxatdan o'chirmoqchimis!`)
       await  axios.delete("http://localhost:3000/users/"+ this.id);
       console.log("User o'chirildi");
-    }
+      this.toHomePage()
+    },
+    toHomePage(){
+    // this.$router.push({path: `/emplyee/${id}`})
+    this.$router.push({path : "/"})
+    // console.log(this.$router.replase({path : "/"}));
+  },
   },
 
  async mounted() {

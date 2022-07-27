@@ -59,9 +59,11 @@ export default {
     changeGender(){
       if(this.$route.params.gender === "male"){
         this.isCheckedMale = true
+        this.newGender = "male"
       }
       else if(this.$route.params.gender === "famale"){
         this.isCheckedFamale = true
+        this.newGender = "famale"
       }
      
     },
@@ -76,17 +78,23 @@ export default {
       }
       this.editUser = editUser;
       console.log(this.editUser);
-      this.getEditUserServer()
+      this.getEditUserServer();
+      this.toHomePage()
     },
 
    getRadioBtn(result){
-    this.newGender = result.target.value
+    this.newGender = result.target.value;
+    console.log(this.newGender);
    },
 
    async getEditUserServer(){
-      await axios.patch("http://localhost:3000/users/"+this.$route.params.id,this.editUser)
-      
-   }
+      await axios.patch("http://localhost:3000/users/"+this.$route.params.id,this.editUser) 
+   },
+     toHomePage(){
+    // this.$router.push({path: `/emplyee/${id}`})
+    this.$router.push({path : "/"})
+    // console.log(this.$router.replase({path : "/"}));
+  }
    
   },
   mounted() {

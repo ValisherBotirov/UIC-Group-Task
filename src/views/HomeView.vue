@@ -1,5 +1,5 @@
 <template>
-  <div class="home grid grid-cols-2 gap-10">
+  <div class="home grid grid-cols-[3fr_2fr] gap-10">
   <!-- Xodimlar ro'yxati -->
      <div class = "card">
       <div class="card-header">
@@ -61,7 +61,13 @@ export default {
   data() {
     return {
       users : [],
-      index : 1
+      maleCount : "",
+      famaleCount : "",
+      allCount : "",
+      itCount : "",
+      marketingCount : "",
+      acountingCount : "",
+      middleAge : ""
     }
   },
   
@@ -69,7 +75,8 @@ export default {
       // Path bo'yicha chaqirib olish
   toEmployee(id){
     this.$router.push({path: `/emplyee/${id}`})
-  }
+  },
+  
   },
 
   async mounted() {

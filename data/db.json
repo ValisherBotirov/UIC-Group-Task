@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "fullName": "Malika Xoliqova",
+      "fullName": "Sevinch Xoliqova",
       "departament": "Marketing",
       "position": " Product Marketing",
       "gender": "famale",
-      "age": 21
+      "age": "21"
     },
     {
       "id": 4,
@@ -38,79 +38,71 @@
       "departament": "Marketing",
       "position": "Copywriting",
       "gender": "famale",
-      "age": 18
-    },
-    {
-      "id": 6,
-      "fullName": "Jafar Murodov",
-      "departament": "IT",
-      "position": "Frontend Developer",
-      "gender": "male",
-      "age": 23
-    },
-    {
-      "id": 7,
-      "fullName": "Zarif Nematov",
-      "departament": "Acounting",
-      "position": "Auditor",
-      "gender": "male",
       "age": 20
     },
     {
-      "id": 8,
-      "fullName": "Madina Furqatovna",
-      "departament": "Marketing",
-      "position": "Product Marketing",
-      "gender": "famale",
-      "age": 21
-    },
-    {
-      "fullName": "Jonibek Pardayev",
-      "departament": "IT",
-      "position": "UI / UX Designer",
-      "gender": "male",
-      "age": 24,
-      "id": 9
-    },
-    {
-      "fullName": "Jonibek Munirov",
-      "departament": "Marketing",
-      "position": "Product Marketing",
-      "gender": "male",
-      "age": 24,
-      "id": 10
-    },
-    {
-      "fullName": "Malika Rustamova",
-      "departament": "IT",
-      "position": "Android Developer",
-      "gender": "famale",
-      "age": 19,
-      "id": 11
-    },
-    {
+      "id": 6,
       "fullName": "Abdulaziz Xurboyev",
       "departament": "IT",
       "position": "Backend Developer",
       "gender": "male",
-      "age": 18,
-      "id": 12
+      "age": 18
     },
     {
-      "fullName": "sdfhws ahdv",
-      "departament": "sadkjv",
-      "position": "adkb",
+      "id": 7,
+      "fullName": "Anvar Mirzayev",
+      "departament": "IT",
+      "position": "Android Developer",
       "gender": "male",
-      "age": 5,
-      "id": 14
+      "age": 21
     },
     {
-      "fullName": "Murodjon",
+      "id": 8,
+      "fullName": "Anora Po'latova",
+      "departament": "Acounting",
+      "position": "Forensic Accountant",
+      "gender": "famale",
+      "age": 19
+    },
+    {
+      "id": 9,
+      "fullName": "Davlat Azizov",
       "departament": "Marketing",
-      "position": "Sotuv bo'limi",
+      "position": "Event Marketing",
       "gender": "male",
-      "age": "24",
-      "id": 15
+      "age": 22
+    },
+    {
+      "id": 10,
+      "fullName": "Malika Rustamova",
+      "departament": "IT",
+      "position": "Android Developer",
+      "gender": "famale",
+      "age": 19
+    },
+    {
+      "id": 11,
+      "fullName": "Jonibek Munirov",
+      "departament": "Accounting",
+      "position": "Managerial Accountant",
+      "gender": "male",
+      "age": 19
+    },
+    {
+      "id": 12,
+      "fullName": "Abbos Ismatov",
+      "departament": "IT",
+      "position": "UI/UX Designer",
+      "gender": "male",
+      "age": 20
+    },
+    {
+      "fullName": "Jamshidbek Axlidinov",
+      "departament": "IT",
+      "position": "PHP Backend Developer",
+      "gender": "male",
+      "age": "19",
+      "id": 13
     }
   ]
 }
