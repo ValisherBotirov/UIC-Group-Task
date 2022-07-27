@@ -19,11 +19,11 @@
         <div class = "flex gap-4">
            <div class = "flex gap-2 items-center ml-5">
              <label for="male" class = "font-medium">Male</label>
-             <input type="radio" name = "gender" id = "male" v-on:input = "getRadioAnsver" value="male">
+             <input type="radio" name = "gender" id = "male" v-on:input = "getRadioAnsver" value="male" :checked="isChecked">
            </div>
            <div class = "flex gap-2 items-center ">
              <label for="famale" class = "font-medium">Famale</label>
-             <input type="radio" name = "gender" id = "famale" v-on:input = "getRadioAnsver" value="famale">
+             <input type="radio" name = "gender" id = "famale" v-on:input = "getRadioAnsver" value="famale" :checked="isChecked">
            </div>
          </div>
          <label class = "py-2 font-medium">Age</label>
@@ -46,7 +46,8 @@ export default {
       position : "",
       gender : "",
       age : "",
-      newUser : null
+      newUser : null,
+      isChecked : null
     }
   },
 
@@ -69,7 +70,18 @@ export default {
     await axios.post("http://localhost:3000/users",this.newUser,{})
     //  await  axios.delete("http://localhost:3000/users/"+ this.id) 
     // await axios.patch("http://localhost:3000/users/9",this.newUser)
+    this.clearInputValue()
    },
+
+    clearInputValue(){
+      this.fullName = "",
+      this.departament = "",
+      this.position = "",
+      this.gender = "",
+      this.age = "",
+      this.isChecked = false
+    },
+
    getRadioAnsver(result){
     this.gender = result.target.value
    }

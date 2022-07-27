@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
-  </div>
-  <div class = "card">
-    <div class="card-header">
+  <div class="home grid grid-cols-2 gap-10">
+  <!-- Xodimlar ro'yxati -->
+     <div class = "card">
+      <div class="card-header">
       <h6 class="card-title">Employee Performance</h6>
-    </div>
-    <div class = "card-body">
+        </div>
+      <div class = "card-body">
       <div class = "table-responsive">
         <table class = "table table-hover align-middle">
           <thead>
@@ -19,18 +19,31 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for = "(user,index) in users[0]" :key="user">
-              <td class = "font-medium"><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{index+1}}</router-link></td>
-              <td class="text-dark font-medium"><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.fullName}}</router-link></td>              
-              <td class = "text-black"><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.departament}}</router-link></td>
-              <td class = "text-black"><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.position}}</router-link></td>
-              <td class="text-black"><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.gender}}</router-link></td>
-              <td class="text-black"><router-link :to="{name:'emplyee',params:{id:user.id,fullName:user.fullName,departament:user.departament,position:user.position,gender:user.gender,age:user.age}}">{{user.age}} </router-link></td>      
+            <tr v-for = "(user,index) in users[0]" :key="user"  @click="toEmployee(user.id)">
+          
+              <td class = "font-medium">{{index+1}}</td>
+              <td class="text-dark font-medium">{{user.fullName}}</td>              
+              <td class = "text-black">{{user.departament}}</td>
+              <td class = "text-black">{{user.position}}</td>
+              <td class="text-black">{{user.gender}}</td>
+              <td class="text-black">{{user.age}}</td>      
+       
             </tr>
           </tbody>
         </table>
       </div>
+       </div>
     </div>
+  <!-- Kompaniya malumotlari  -->
+  <div class = "border">
+     <p>Umumiy xodimlar soni : </p>
+     <p>Erkak xodimlar soni : </p>
+     <p>Ayol xodimlar soni : </p>
+     <p>IT departamentdagi xodimlar soni : </p>
+     <p>Marketing departamentdagi xodimlar soni : </p>
+     <p>Acounting departamentdagi xodimlar soni  : </p>
+     <p>Xodimlarning o'rtacha yoshi : </p>
+  </div>
   </div>
 </template>
 
@@ -53,7 +66,10 @@ export default {
   },
   
   methods: {
-  
+      // Path bo'yicha chaqirib olish
+  toEmployee(id){
+    this.$router.push({path: `/emplyee/${id}`})
+  }
   },
 
   async mounted() {

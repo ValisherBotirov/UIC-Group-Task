@@ -17,12 +17,12 @@ const routes = [
     component : AddView
   },
   {
-    path : "/emplyee",
+    path : "/emplyee/:id",
     name : "emplyee",
     component : Employee
   },
   {
-    path : "/editEmployee",
+    path : "/editEmployee ",
     name : "editEmployee",
     component : EditEmployee
   }

@@ -18,12 +18,12 @@
         <label class = "block py-2 font-medium">Choose gender : </label>
         <div class = "flex gap-4">
            <div class = "flex gap-2 items-center ml-5">
-             <label for="male" class = "font-medium">Male</label>
-             <input type="radio" name = "gender" id = "male" value = "male"  v-on:input="getRadioBtn">
+             <label for="male" class = "font-medium" >Male</label>
+             <input type="radio" name = "gender" id = "male" value = "male"  v-on:input="getRadioBtn" :checked="isCheckedMale">
            </div>
            <div class = "flex gap-2 items-center ">
              <label for="famale" class = "font-medium">Famale</label>
-             <input type="radio" name = "gender" id = "famale" value="famale" v-on:input="getRadioBtn">
+             <input type="radio" name = "gender" id = "famale" value="famale" v-on:input="getRadioBtn" :checked="isCheckedFamale">
            </div>
          </div>
          <label class = "py-2 font-medium">Age</label>
@@ -48,18 +48,30 @@ export default {
       age : this.$route.params.age,
       editUser : null,
       newGender : null,
-      editUser : null
+      editUser : null,
+      isCheckedFamale : null,
+      isCheckedMale : null,
+      
     }
   },
 
   methods: {
+    changeGender(){
+      if(this.$route.params.gender === "male"){
+        this.isCheckedMale = true
+      }
+      else if(this.$route.params.gender === "famale"){
+        this.isCheckedFamale = true
+      }
+     
+    },
    
     editUserInfo(){
       const editUser = {
         fullName : this.fullName,
         departament : this.departament,
         position : this.position,
-        gender : this.gender,
+        gender : this.newGender,
         age : this.age
       }
       this.editUser = editUser;
@@ -73,9 +85,14 @@ export default {
 
    async getEditUserServer(){
       await axios.patch("http://localhost:3000/users/"+this.$route.params.id,this.editUser)
+      
    }
    
   },
+  mounted() {
+    this.changeGender()  
+  },
+  
 
    
  

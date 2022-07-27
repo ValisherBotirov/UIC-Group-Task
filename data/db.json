@@ -85,8 +85,32 @@
       "departament": "IT",
       "position": "Android Developer",
       "gender": "famale",
-      "age": 18,
+      "age": 19,
       "id": 11
+    },
+    {
+      "fullName": "Abdulaziz Xurboyev",
+      "departament": "IT",
+      "position": "Backend Developer",
+      "gender": "male",
+      "age": 18,
+      "id": 12
+    },
+    {
+      "fullName": "sdfhws ahdv",
+      "departament": "sadkjv",
+      "position": "adkb",
+      "gender": "male",
+      "age": 5,
+      "id": 14
+    },
+    {
+      "fullName": "Murodjon",
+      "departament": "Marketing",
+      "position": "Sotuv bo'limi",
+      "gender": "male",
+      "age": "24",
+      "id": 15
     }
   ]
 }
