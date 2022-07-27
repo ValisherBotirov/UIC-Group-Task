@@ -36,13 +36,13 @@
     </div>
   <!-- Kompaniya malumotlari  -->
   <div class = "border">
-     <p>Umumiy xodimlar soni : </p>
-     <p>Erkak xodimlar soni : </p>
-     <p>Ayol xodimlar soni : </p>
-     <p>IT departamentdagi xodimlar soni : </p>
-     <p>Marketing departamentdagi xodimlar soni : </p>
-     <p>Acounting departamentdagi xodimlar soni  : </p>
-     <p>Xodimlarning o'rtacha yoshi : </p>
+     <p>Umumiy xodimlar soni : {{allCount}}</p>
+     <p>Erkak xodimlar soni : {{maleCount}}</p>
+     <p>Ayol xodimlar soni : {{famaleCount}}</p>
+     <p>IT departamentdagi xodimlar soni : {{itCount}}</p>
+     <p>Marketing departamentdagi xodimlar soni : {{marketingCount}}</p>
+     <p>Acounting departamentdagi xodimlar soni  : {{acountingCount}}</p>
+     <p>Xodimlarning o'rtacha yoshi : {{middleAge}}</p>
   </div>
   </div>
 </template>
@@ -61,13 +61,15 @@ export default {
   data() {
     return {
       users : [],
-      maleCount : "",
-      famaleCount : "",
-      allCount : "",
-      itCount : "",
-      marketingCount : "",
-      acountingCount : "",
-      middleAge : ""
+      maleCount : 0,
+      famaleCount : 0,
+      allCount : null,
+      itCount : 0,
+      marketingCount : 0,
+      acountingCount : 0,
+      middleAge : 0,
+      sumAge : 0
+      
     }
   },
   
@@ -76,14 +78,39 @@ export default {
   toEmployee(id){
     this.$router.push({path: `/emplyee/${id}`})
   },
-  
+
+  getOficeInfo(){
+    this.allCount = this.users[0].length
+   this.users[0].map(user => {
+    if(user.gender === "male"){
+      this.maleCount += 1
+    }
+    if(user.gender === "famale"){
+      this.famaleCount += 1
+    }
+    if(user.departament === "IT"){
+      this.itCount +=1
+      }
+    if(user.departament === "Marketing"){
+      this.marketingCount +=1
+    }
+    this.acountingCount = this.allCount - (this.marketingCount + this.itCount);
+    
+    this.sumAge = this.sumAge +(+user.age);
+    // console.log(this.sumAge);
+    
+    this.middleAge = Math.round(this.sumAge / this.allCount)
+   })
+
+  }
+
   },
 
   async mounted() {
     const res = await axios.get("http://localhost:3000/users");
-    // console.log(res.data);
-    this.users.push(res.data)
-    // console.log(this.users);
+    this.users.push(res.data);
+    this.getOficeInfo()
+    
   },
 }
 </script>

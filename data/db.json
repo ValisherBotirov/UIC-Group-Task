@@ -6,7 +6,7 @@
       "departament": "IT",
       "position": "FullStack Developer",
       "gender": "male",
-      "age": 20
+      "age": "19"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "departament": "IT",
       "position": "Node js Backend Developer",
       "gender": "male",
-      "age": 19
+      "age": 18
     },
     {
       "id": 3,
@@ -83,10 +83,10 @@
     {
       "id": 11,
       "fullName": "Jonibek Munirov",
-      "departament": "Accounting",
+      "departament": "Acounting",
       "position": "Managerial Accountant",
       "gender": "male",
-      "age": 19
+      "age": 20
     },
     {
       "id": 12,
@@ -95,14 +95,6 @@
       "position": "UI/UX Designer",
       "gender": "male",
       "age": 20
-    },
-    {
-      "fullName": "Jamshidbek Axlidinov",
-      "departament": "IT",
-      "position": "PHP Backend Developer",
-      "gender": "male",
-      "age": "19",
-      "id": 13
     }
   ]
 }

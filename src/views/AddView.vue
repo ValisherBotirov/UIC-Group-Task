@@ -59,7 +59,7 @@ export default {
         departament : this.departament,
         position : this.position,
         gender : this.gender,
-        age : this.age
+        age : +this.age
       }
       this.newUser = newUser;
         console.log(newUser);

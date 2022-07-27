@@ -74,12 +74,12 @@ export default {
         departament : this.departament,
         position : this.position,
         gender : this.newGender,
-        age : this.age
+        age : +this.age
       }
       this.editUser = editUser;
       console.log(this.editUser);
       this.getEditUserServer();
-      this.toHomePage()
+      
     },
 
    getRadioBtn(result){
@@ -89,6 +89,7 @@ export default {
 
    async getEditUserServer(){
       await axios.patch("http://localhost:3000/users/"+this.$route.params.id,this.editUser) 
+      this.toHomePage()
    },
      toHomePage(){
     // this.$router.push({path: `/emplyee/${id}`})
