@@ -6,7 +6,7 @@
       "departament": "IT",
       "position": "FullStack Developer",
       "gender": "male",
-      "age": "19"
+      "age": 20
     },
     {
       "id": 2,
@@ -89,12 +89,20 @@
       "age": 20
     },
     {
-      "id": 12,
-      "fullName": "Abbos Ismatov",
+      "fullName": "Abbos Ismatullayev",
       "departament": "IT",
       "position": "UI/UX Designer",
       "gender": "male",
-      "age": 20
+      "age": 24,
+      "id": 12
+    },
+    {
+      "fullName": "Davron Ergashev",
+      "departament": "IT",
+      "position": "Python Developer",
+      "gender": "male",
+      "age": 22,
+      "id": 13
     }
   ]
 }

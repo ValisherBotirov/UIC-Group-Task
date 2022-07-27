@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AddView from '../views/AddView.vue'
 import Employee from "../components/Employee.vue"
 import EditEmployee from "../components/EditEmployee.vue"
+import App from "../App.vue"
 
 const routes = [
   {
@@ -11,6 +12,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  // {
+  //   path:'/home',
+  //   name : 'home',
+  //   component : HomeView
+  // },
   {
     path: '/addUser',
     name: 'addPage',
