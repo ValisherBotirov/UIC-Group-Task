@@ -103,6 +103,30 @@
       "gender": "male",
       "age": 22,
       "id": 13
+    },
+    {
+      "fullName": "Ozoda Mirzayeva",
+      "departament": "Marketing",
+      "position": "HR Manager",
+      "gender": "famale",
+      "age": 21,
+      "id": 14
+    },
+    {
+      "fullName": "Rustam Soliyev",
+      "departament": "IT",
+      "position": ".NET Developer",
+      "gender": "male",
+      "age": 23,
+      "id": 15
+    },
+    {
+      "fullName": "Marjona Arzimurodova",
+      "departament": "IT",
+      "position": "Python Developer",
+      "gender": "famale",
+      "age": 18,
+      "id": 16
     }
   ]
 }
