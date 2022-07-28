@@ -75,13 +75,13 @@ const styleScript = (count1, count2, count3) => {
   let dotM = document.querySelector(".m_dot");
   let dotS = document.querySelector(".s_dot");
 
-  hh.style.strokeDashoffset = 440 - (440 * +count1 * 5) / 60;
-  mm.style.strokeDashoffset = 440 - (440 * +count2 * 5) / 60;
-  ss.style.strokeDashoffset = 440 - (440 * +count3 * 5) / 60;
+  hh.style.strokeDashoffset = 440 - (440 * +count1 * 4) / 60;
+  mm.style.strokeDashoffset = 440 - (440 * +count2 * 4) / 60;
+  ss.style.strokeDashoffset = 440 - (440 * +count3 * 4) / 60;
 
-  dotH.style.transform = `rotate(${+count1 * 5 * 6}deg)`;
-  dotM.style.transform = `rotate(${+count2 * 5 * 6}deg)`;
-  dotS.style.transform = `rotate(${+count3 * 5 * 6}deg)`;
+  dotH.style.transform = `rotate(${+count1 * 4 * 6}deg)`;
+  dotM.style.transform = `rotate(${+count2 * 4 * 6}deg)`;
+  dotS.style.transform = `rotate(${+count3 * 4 * 6}deg)`;
 };
 
 export default {

@@ -183,6 +183,14 @@
       "gender": "male",
       "age": 22,
       "id": 23
+    },
+    {
+      "fullName": "Bekzod Baratov",
+      "departament": "IT",
+      "position": "FullStack Developer",
+      "gender": "male",
+      "age": 22,
+      "id": 24
     }
   ]
 }

@@ -29,7 +29,7 @@
         </p>
       </div>
     </div>
-    <div class="flex gap-2 justify-end">
+    <div class="flex gap-2 justify-end mt-4 pb-4">
       <button class="btn btn-primary">
         <router-link
           :to="{
@@ -102,8 +102,9 @@ export default {
 .userInfo {
   width: 50%;
   height: auto;
-  margin: 100px auto;
-  padding-bottom: 30px;
+  margin: 60px auto;
+  /* padding-bottom: 30px; */
+  margin-bottom: 0;
 }
 .qushimchaClass {
   height: 10vh;

@@ -29,9 +29,11 @@
     </div>
   </div>
 
-  <div class="home grid grid-cols-[3fr_2fr] bg-slate-100 pt-4 px-5 gap-5">
+  <div
+    class="home flex flex-col-reverse xl:grid xl:grid-cols-[3fr_2fr] bg-slate-100 pt-4 px-5 gap-5"
+  >
     <!-- Xodimlar ro'yxati -->
-    <div class="card">
+    <div class="card grid-row-start-2 xl:grid-row-start-1">
       <div class="card-header bg-white border-b-none border-none">
         <div class="flex justify-between items-center bg-white pt-3">
           <h6 class="card-title text-xl font-medium">Employee Information</h6>
@@ -46,12 +48,12 @@
         <div class="table-responsive">
           <table class="table table-hover align-middle">
             <thead>
-              <tr class="border-b border-[#f68c1f] border-b-2">
+              <tr class="border-[#f68c1f] border-b-2">
                 <th>#</th>
                 <th>FullName</th>
-                <th>Departament</th>
+                <th>Departament <i class="fa-solid fa-sort"></i></th>
                 <th>Position</th>
-                <th>Gender</th>
+                <th>Gender <i class="fa-solid fa-sort"></i></th>
                 <th>Age</th>
               </tr>
             </thead>
