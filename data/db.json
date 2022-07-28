@@ -143,6 +143,30 @@
       "gender": "famale",
       "age": 21,
       "id": 18
+    },
+    {
+      "fullName": "Islombek Pardayev ",
+      "departament": "IT",
+      "position": "3D Max Designer",
+      "gender": "male",
+      "age": 19,
+      "id": 19
+    },
+    {
+      "fullName": "Murodxo'ja Payziyev",
+      "departament": "Marketing ",
+      "position": "Manager",
+      "gender": "male",
+      "age": 25,
+      "id": 20
+    },
+    {
+      "fullName": "Sabina Kamolova",
+      "departament": "Acounting",
+      "position": "Managerial Accountant",
+      "gender": "famale",
+      "age": 21,
+      "id": 21
     }
   ]
 }
