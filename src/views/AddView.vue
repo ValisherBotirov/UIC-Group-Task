@@ -127,7 +127,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .addForm {
   width: 50%;
 }
