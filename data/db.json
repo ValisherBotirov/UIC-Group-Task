@@ -167,6 +167,22 @@
       "gender": "famale",
       "age": 21,
       "id": 21
+    },
+    {
+      "fullName": "Jafar Aliyev",
+      "departament": "IT",
+      "position": "Frontend Developer",
+      "gender": "male",
+      "age": 23,
+      "id": 22
+    },
+    {
+      "fullName": "Jafar Mirzarahimov",
+      "departament": "Acounting",
+      "position": "Forensic Accountant",
+      "gender": "male",
+      "age": 22,
+      "id": 23
     }
   ]
 }

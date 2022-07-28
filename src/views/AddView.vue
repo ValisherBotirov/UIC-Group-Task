@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5 container bg-slate-100">
+  <div class="mt-5 container bg-slate-100 pb-10">
     <form class="addForm form-control container pt-4 pb-10 px-6">
       <div class="flex justify-between pb-4">
         <h1 class="text-[30px] font-semibold">Add Employee</h1>
