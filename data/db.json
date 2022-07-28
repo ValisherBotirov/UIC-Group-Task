@@ -127,6 +127,22 @@
       "gender": "famale",
       "age": 18,
       "id": 16
+    },
+    {
+      "fullName": "Abbos Shuhratov",
+      "departament": "Acounting",
+      "position": "Auditor",
+      "gender": "male",
+      "age": 23,
+      "id": 17
+    },
+    {
+      "fullName": "Vazira Xamrayeva",
+      "departament": "Marketing",
+      "position": "Product Marketing",
+      "gender": "famale",
+      "age": 21,
+      "id": 18
     }
   ]
 }

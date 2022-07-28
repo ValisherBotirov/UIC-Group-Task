@@ -1,7 +1,12 @@
 const styleScript=()=>{ }
 
 <template>
-  <div class="container">
+  <div class="py-3 pt-6 mt-6">
+    <h2 class="text-xl font-medium text-center pt-6 pb-4">
+      Departament Statistics <i class="fa-regular fa-chart-user"></i>
+    </h2>
+  </div>
+  <div class="container pl-[10px] text-center">
     <div id="time">
       <div class="circle" style="--color: #ff2972">
         <div class="dots h_dot" ref="departamentIT"></div>
@@ -36,6 +41,26 @@ const styleScript=()=>{ }
       <div class="ap">
         <div id="ampm">AM</div>
       </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-3 -">
+    <div class="mb-3 mt-4 flex flex-col gap-2 justify-center items-center">
+      <p class="text-muted small text-slate-800 text-[17px] font-semibold">
+        IT
+      </p>
+      <h4 class="mb-0 text-[30px]">{{ counts[0] }}</h4>
+    </div>
+    <div class="mb-3 mt-4 flex flex-col gap-2 justify-center items-center">
+      <p class="text-muted small text-slate-800 text-[17px] font-semibold">
+        Marketing
+      </p>
+      <h4 class="mb-0 text-[30px]">{{ counts[1] }}</h4>
+    </div>
+    <div class="mb-3 mt-4 flex flex-col gap-2 justify-center items-center">
+      <p class="text-muted small text-slate-800 text-[17px] font-semibold">
+        Acounting
+      </p>
+      <h4 class="mb-0 text-[30px]">{{ counts[2] }}</h4>
     </div>
   </div>
 </template>

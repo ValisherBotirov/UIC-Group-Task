@@ -77,18 +77,48 @@
     <!-- Kompaniya malumotlari -->
 
     <div class="border p-3 h-full bg-white">
-      <h2 class="text-center text-xl font-medium">Employee Statistics</h2>
-      <p>Umumiy xodimlar soni : {{ allCount }}</p>
+      <h2 class="text-center text-xl font-medium pb-2">Employee Statistics</h2>
+      <div class="flex gap-10 text-center pt-4 pb-10">
+        <div>
+          <p><i class="fa-solid fa-circle-info text-[30px] w-[100px]"></i></p>
+          <div>
+            <p class="">O'rtacha yosh</p>
+            <p class="text-[18px] font-medium">{{ middleAge }}</p>
+          </div>
+        </div>
+        <div>
+          <p><i class="fa-solid fa-users text-[30px]"></i></p>
+          <div>
+            <p>Total Employee</p>
+            <p class="text-[18px] font-medium">{{ allCount }}</p>
+          </div>
+        </div>
+        <div>
+          <p><i class="fa-solid fa-user-tie text-[30px]"></i></p>
+          <div>
+            <p>Male Employee</p>
+            <p class="text-[18px] font-medium">{{ maleCount }}</p>
+          </div>
+        </div>
+        <div>
+          <p><i class="fa-solid fa-user text-[30px]"></i></p>
+          <div>
+            <p>Famale Employee</p>
+            <p class="text-[18px] font-medium">{{ famaleCount }}</p>
+          </div>
+        </div>
+      </div>
+      <Diagrams
+        v-if="allCount"
+        :counts="[itCount, marketingCount, acountingCount, allCount]"
+      />
+      <!-- <p>Umumiy xodimlar soni : {{ allCount }}</p>
       <p>Erkak xodimlar soni : {{ maleCount }}</p>
       <p>Ayol xodimlar soni : {{ famaleCount }}</p>
       <p>IT departamentdagi xodimlar soni : {{ itCount }}</p>
       <p>Marketing departamentdagi xodimlar soni : {{ marketingCount }}</p>
       <p>Acounting departamentdagi xodimlar soni : {{ acountingCount }}</p>
-      <p>Xodimlarning o'rtacha yoshi : {{ middleAge }}</p>
-      <Diagrams
-        v-if="allCount"
-        :counts="[itCount, marketingCount, acountingCount, allCount]"
-      />
+      <p>Xodimlarning o'rtacha yoshi : {{ middleAge }}</p> -->
     </div>
   </div>
 </template>
