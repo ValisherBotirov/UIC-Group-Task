@@ -5,9 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "tail":"npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+    "tail": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
   },
   "dependencies": {
+    "@vue-hero-icons/solid": "^1.7.2",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "json-server": "^0.17.0",

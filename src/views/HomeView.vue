@@ -33,49 +33,120 @@
     class="home flex flex-col-reverse xl:grid xl:grid-cols-[3fr_2fr] bg-slate-100 pt-4 px-5 gap-5"
   >
     <!-- Xodimlar ro'yxati -->
-    <div class="card grid-row-start-2 xl:grid-row-start-1">
-      <div class="card-header bg-white border-b-none border-none">
-        <div class="flex justify-between items-center bg-white pt-3">
-          <h6 class="card-title text-xl font-medium">Employee Information</h6>
-          <button class="btn btn-success">
-            <router-link to="/addUser" class="hover:text-white"
-              >Add Employee &nbsp;<i class="fa-solid fa-user-plus"></i
-            ></router-link>
-          </button>
+    <div>
+      <div class="card">
+        <div class="card-header bg-white border-b-none border-none">
+          <div class="flex justify-between items-center bg-white pt-3">
+            <h6 class="card-title text-xl font-medium">Employee Information</h6>
+            <button class="btn btn-success">
+              <router-link to="/addUser" class="hover:text-white"
+                >Add Employee &nbsp;<i class="fa-solid fa-user-plus"></i
+              ></router-link>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="card-body">
-        <div class="table-responsive">
-          <table class="table table-hover align-middle">
-            <thead>
-              <tr class="border-[#f68c1f] border-b-2">
-                <th>#</th>
-                <th>FullName</th>
-                <th>Departament <i class="fa-solid fa-sort"></i></th>
-                <th>Position</th>
-                <th>Gender <i class="fa-solid fa-sort"></i></th>
-                <th>Age</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                v-for="(user, index) in users[0]"
-                :key="user"
-                @click="toEmployee(user.id)"
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead>
+                <tr class="border-[#f68c1f] border-b-2">
+                  <th>#</th>
+                  <th>FullName</th>
+                  <th>Departament <i class="fa-solid fa-sort"></i></th>
+                  <th>Position</th>
+                  <th>Gender <i class="fa-solid fa-sort"></i></th>
+                  <th>Age</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="(user, index) in paginationUser[loopNum]"
+                  :key="user"
+                  @click="toEmployee(user.id)"
+                >
+                  <td class="font-medium">{{ index + 1 }}</td>
+                  <td class="text-dark font-medium">{{ user.fullName }}</td>
+                  <td class="text-black">{{ user.departament }}</td>
+                  <td class="text-black">{{ user.position }}</td>
+                  <td class="text-black">{{ user.gender }}</td>
+                  <td class="text-black">{{ user.age }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- pagination -->
+        <div
+          v-if="totalUser"
+          class="bg-white px-4 pb-4 flex items-center justify-between sm:px-6"
+        >
+          <div class="flex-1 flex justify-between sm:hidden">
+            <a
+              href="#"
+              class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+            >
+              Previous
+            </a>
+            <a
+              href="#"
+              class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+            >
+              Next
+            </a>
+          </div>
+          <div
+            class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between"
+          >
+            <div>
+              <p class="text-sm text-gray-700">
+                Showing
+
+                <span class="font-medium">{{ page }}</span>
+
+                to
+
+                <span class="font-medium">{{ totalPage }}</span>
+
+                of
+
+                <span class="font-medium">{{ totalUser }}</span>
+
+                results
+              </p>
+            </div>
+            <div>
+              <nav
+                class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px"
+                aria-label="Pagination"
               >
-                <td class="font-medium">{{ index + 1 }}</td>
-                <td class="text-dark font-medium">{{ user.fullName }}</td>
-                <td class="text-black">{{ user.departament }}</td>
-                <td class="text-black">{{ user.position }}</td>
-                <td class="text-black">{{ user.gender }}</td>
-                <td class="text-black">{{ user.age }}</td>
-              </tr>
-            </tbody>
-          </table>
+                <div
+                  @click="prevPage"
+                  class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                >
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+                <div
+                  v-for="page in totalPage"
+                  :key="page"
+                  class="z-10 bg-indigo-50 border-indigo-500 text-indigo-600 relative inline-flex items-center px-4 py-2 border text-sm font-medium cursor-pointer"
+                  @click="changePage(page)"
+                >
+                  {{ page }}
+                </div>
+
+                <div
+                  @click="nextPage"
+                  class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                >
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
     <!-- Kompaniya malumotlari -->
 
     <div class="border p-3 h-full bg-white">
@@ -149,6 +220,12 @@ export default {
       acountingCount: 0,
       middleAge: 0,
       sumAge: 0,
+      paginationUser: [],
+      limit: 10,
+      page: 1,
+      totalPage: "",
+      totalUser: "",
+      loopNum: 0,
     };
   },
 
@@ -156,6 +233,28 @@ export default {
     // Path bo'yicha chaqirib olish
     toEmployee(id) {
       this.$router.push({ path: `/emplyee/${id}` });
+    },
+
+    changePage(page) {
+      console.log(page);
+      this.page = page;
+      this.loopNum = page - 1;
+      this.getPaginationUser();
+      console.log(this.paginationUser);
+    },
+    nextPage() {
+      if (this.totalPage > this.page) {
+        this.page += 1;
+        this.loopNum = this.page - 1;
+        this.getPaginationUser();
+      }
+    },
+    prevPage() {
+      if (this.page > 1) {
+        this.page -= 1;
+        this.loopNum = this.page - 1;
+        this.getPaginationUser();
+      }
     },
     getOficeInfo() {
       this.allCount = this.users[0].length;
@@ -181,12 +280,26 @@ export default {
         this.middleAge = Math.round(this.sumAge / this.allCount);
       });
     },
+    async getPaginationUser() {
+      const res = await axios.get("http://localhost:3000/users", {
+        params: {
+          _limit: this.limit,
+          _page: this.page,
+        },
+      });
+      console.log(res.data);
+      this.paginationUser.push(res.data);
+      console.log(this.paginationUser);
+      this.totalUser = res.headers["x-total-count"];
+      this.totalPage = Math.ceil(res.headers["x-total-count"] / this.limit);
+    },
   },
 
   async mounted() {
     const res = await axios.get("http://localhost:3000/users");
     this.users.push(res.data);
     this.getOficeInfo();
+    this.getPaginationUser();
   },
 };
 </script>
