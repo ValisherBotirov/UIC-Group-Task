@@ -95,7 +95,6 @@ export default {
   },
   methods: {
     addStyle() {
-      console.log(this.counts);
       this.itProsent = Math.round((this.counts[0] * 100) / this.counts[3]);
       this.marketingProsent = Math.round(
         (this.counts[1] * 100) / this.counts[3]

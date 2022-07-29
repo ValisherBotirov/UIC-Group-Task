@@ -60,7 +60,7 @@
               </thead>
               <tbody>
                 <tr
-                  v-for="(user, index) in paginationUser[loopNum]"
+                  v-for="(user, index) in paginationUser"
                   :key="user"
                   @click="toEmployee(user.id)"
                 >
@@ -226,6 +226,8 @@ export default {
       totalPage: "",
       totalUser: "",
       loopNum: 0,
+      sortNumber: 0,
+      vvv: [],
     };
   },
 
@@ -238,6 +240,7 @@ export default {
     changePage(page) {
       console.log(page);
       this.page = page;
+      console.log(this.page);
       this.loopNum = page - 1;
       this.getPaginationUser();
       console.log(this.paginationUser);
@@ -256,6 +259,16 @@ export default {
         this.getPaginationUser();
       }
     },
+    sortFunc() {
+      // this.paginationUser.map((users) =>
+      //   users.filter((user) => console.log(user))
+      // );
+      this.paginationUser[this.loopNum].filter(
+        (user) => user.gender === "male"
+      );
+      console.log(this.paginationUser);
+    },
+
     getOficeInfo() {
       this.allCount = this.users[0].length;
       this.users[0].map((user) => {
@@ -287,9 +300,7 @@ export default {
           _page: this.page,
         },
       });
-      console.log(res.data);
-      this.paginationUser.push(res.data);
-      console.log(this.paginationUser);
+      this.paginationUser = res.data;
       this.totalUser = res.headers["x-total-count"];
       this.totalPage = Math.ceil(res.headers["x-total-count"] / this.limit);
     },
