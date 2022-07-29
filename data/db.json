@@ -191,6 +191,22 @@
       "gender": "male",
       "age": 22,
       "id": 24
+    },
+    {
+      "fullName": "Zarif Nematov",
+      "departament": "Marketing",
+      "position": "Manager",
+      "gender": "male",
+      "age": 19,
+      "id": 25
+    },
+    {
+      "fullName": "Zuhra Soliyeva",
+      "departament": "IT",
+      "position": "Designer",
+      "gender": "famale",
+      "age": 23,
+      "id": 26
     }
   ]
 }
