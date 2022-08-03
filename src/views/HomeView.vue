@@ -52,7 +52,10 @@
                 <tr class="border-[#f68c1f] border-b-2">
                   <th>#</th>
                   <th>FullName</th>
-                  <th>Departament <i class="fa-solid fa-sort"></i></th>
+                  <th>
+                    Departament
+                    <i class="fa-solid fa-sort" @click="sortDepartament"></i>
+                  </th>
                   <th>Position</th>
                   <th>
                     Gender <i class="fa-solid fa-sort" @click="sortFunc"></i>
@@ -230,6 +233,7 @@ export default {
       totalUser: "",
       loopNum: 0,
       sortNumber: 0,
+      sortNumberDepartament: 0,
     };
   },
 
@@ -267,6 +271,7 @@ export default {
       if (this.sortNumber > 2) {
         this.sortNumber = 0;
         this.paginationUser = this.paginationUser2;
+        console.log(this.sortNumber);
       }
       if (this.sortNumber === 1) {
         this.paginationUser = this.paginationUser.filter(
@@ -275,6 +280,30 @@ export default {
       } else if (this.sortNumber === 2) {
         this.paginationUser = this.paginationUser.filter(
           (user) => user.gender === "famale"
+        );
+      } else {
+        return this.paginationUser;
+      }
+    },
+
+    sortDepartament() {
+      this.sortNumberDepartament += 1;
+      this.paginationUser = this.paginationUser2;
+      if (this.sortNumberDepartament > 3) {
+        this.sortNumberDepartament = 0;
+        this.paginationUser = this.paginationUser2;
+      }
+      if (this.sortNumberDepartament === 1) {
+        this.paginationUser = this.paginationUser.filter(
+          (user) => user.departament === "IT"
+        );
+      } else if (this.sortNumberDepartament === 2) {
+        this.paginationUser = this.paginationUser.filter(
+          (user) => user.departament === "Marketing"
+        );
+      } else if (this.sortNumberDepartament === 3) {
+        this.paginationUser = this.paginationUser.filter(
+          (user) => user.departament === "Acounting"
         );
       } else {
         return this.paginationUser;
