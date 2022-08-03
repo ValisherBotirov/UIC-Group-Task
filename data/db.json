@@ -223,6 +223,30 @@
       "gender": "male",
       "age": 19,
       "id": 28
+    },
+    {
+      "fullName": "Farzona KArimova",
+      "departament": " Acounting",
+      "position": " Managerial Accountant",
+      "gender": "famale",
+      "age": 22,
+      "id": 29
+    },
+    {
+      "fullName": "Umid Rustamov",
+      "departament": "IT",
+      "position": "FullStack Developer",
+      "gender": "male",
+      "age": 26,
+      "id": 30
+    },
+    {
+      "fullName": "Hasan Po'latov",
+      "departament": "IT",
+      "position": "Java Backend Developer",
+      "gender": "male",
+      "age": 19,
+      "id": 31
     }
   ]
 }
