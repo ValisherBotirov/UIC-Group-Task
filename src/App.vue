@@ -29,9 +29,6 @@ export default {
 </script>
 
 <style>
-/* nav {
-  padding: 24px;
-} */
 
 #app {
   background-color: rgb(241 245 249);

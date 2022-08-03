@@ -153,7 +153,7 @@
       "id": 19
     },
     {
-      "fullName": "Murodxo'ja Payziyev",
+      "fullName": "Jamil Payziyev",
       "departament": "Marketing ",
       "position": "Manager",
       "gender": "male",
@@ -207,6 +207,22 @@
       "gender": "famale",
       "age": 23,
       "id": 26
+    },
+    {
+      "fullName": "Mirzaanvar Aliyev",
+      "departament": "IT",
+      "position": "3D Max Designer",
+      "gender": "male",
+      "age": 19,
+      "id": 27
+    },
+    {
+      "fullName": "Komil Nuriddinov",
+      "departament": "IT",
+      "position": "Android Developer",
+      "gender": "male",
+      "age": 19,
+      "id": 28
     }
   ]
 }
